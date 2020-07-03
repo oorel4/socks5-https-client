@@ -5,7 +5,7 @@
 SOCKS v5 HTTPS client implementation in JavaScript for Node.js.
 
 ```js
-var shttps = require('socks5-https-client');
+var shttps = require('socks5-https-client-timeout');
 
 shttps.get({
 	hostname: 'encrypted.google.com',
@@ -45,6 +45,7 @@ request({
 	agentOptions: {
 		socksHost: 'my-tor-proxy-host', // Defaults to 'localhost'.
 		socksPort: 9050, // Defaults to 1080.
+		timeout: 10000 //ms timeout
 
 		// Optional credentials
 		socksUsername: 'proxyuser',
